@@ -8,7 +8,7 @@
         Titulo: <input type="text" name="titulo" /> <br/>
         Autor: <input type="text" name="autor" /> <br/>
         Año: <input type="text" name="año" /> <br/>
-        Estilo: <input type="text" name="Estilo" /> <br/>
+        Estilo: <input type="text" name="estilo" /> <br/>
         Numero canciones: <input type="text" name="numeroCanciones" /> <br/>
         <input type="submit" value="   Save   " />
   </form>
@@ -30,16 +30,14 @@
                 <td>${disco.numeroCanciones}</td>
 
                 <td>
-                
-              <button type="button" class="btn btn-primary btn-lg active">
-                <a href="101"> EDITAR</a>
-              </button>
+                         <a href="/disco/borrar/${disco_index}">borrar</a>
+                </td>
+                <td>
+                         <a href="/disco/editar/${disco_index}">editar</a>
+                </td>
 
-             <br/>
-             <br/>
-             <button type="button" class="btn btn-success">
-                <a href="102"> BORRAR</a>
-                  </button></td>
+              
+
         </tr>
         </td>
         </#list>

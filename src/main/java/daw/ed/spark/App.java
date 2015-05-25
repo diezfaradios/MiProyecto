@@ -40,22 +40,34 @@ public class App
         });
         
         
-        post(new FreeMarkerRoute("/disco/create") {
+        post(new Route("/disco/create") {
             @Override
-            public ModelAndView handle(Request request, Response response) {            	
+            public Object handle(Request request, Response response) {            	
 
                 String titulo = request.queryParams("titulo");
                 String autor = request.queryParams("autor");
                 String año = request.queryParams("año");
                 String estilo = request.queryParams("estilo");
-               // int numeroCanciones = request.queryParams("numeroCanciones");
-                Disco miDisco = new Disco(titulo,autor,año,estilo);
-                /*Map<String, Object> data = new HashMap<>();
-                data.put("discos",discos); 
+                Integer numeroCanciones = Integer.parseInt(
+                        request.queryParams("numeroCanciones"));
                 
-            	return modelAndView(data, "userList.ftl");*/
-                return modelAndView(null,"borra.ftl");
+                Disco miDisco = new Disco(titulo,autor,año,estilo,numeroCanciones);
+                discos.add(miDisco);
+                
+                response.redirect("/");
+                return null;
             }
+        });
+        
+        get(new Route("/disco/borrar/:indice") {
+                        @Override
+                        public Object handle(Request request, Response response) {
+                            int indice = Integer.parseInt(
+                                    request.params(":indice"));                            
+                            discos.remove(indice);
+                            response.redirect("/");
+                            return null;
+                        }
         });
     }
 }

@@ -25,7 +25,9 @@
     </div>
 
     <div id="content">
-        <@content/>           < #--llama a la plantilla  base.flt-->
+
+        <@content/>       
+
     </div>
 
     <div id ="footer">
