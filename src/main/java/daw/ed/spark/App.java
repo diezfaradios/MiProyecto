@@ -39,7 +39,6 @@ public class App
             }
         });
         
-        
         post(new Route("/disco/create") {
             @Override
             public Object handle(Request request, Response response) {            	
@@ -69,5 +68,33 @@ public class App
                             return null;
                         }
         });
+        
+        get(new FreeMarkerRoute("disco/editar/:indice") {
+            @Override
+            public ModelAndView handle(Request request, Response response) {            	
+
+                int indice = Integer.parseInt(
+                                    request.params(":indice"));    
+                Disco disco = discos.get(indice);
+                
+                Map<String, Object> data = new HashMap<>();
+                data.put("disco",disco);
+                
+            	return modelAndView(data, "editUser.ftl");
+            }
+        });
+        
+              /*  get(new Route("/disco/borrar/:editar") {
+                        @Override
+                        public Object handle(Request request, Response response) {
+                            int indice = Integer.parseInt(
+                                    request.params(":indice"));                            
+                            discos.setValueAT(disco.);
+                            response.redirect("/");
+                            return null;
+                        }
+        }); */
     }
 }
+
+} 

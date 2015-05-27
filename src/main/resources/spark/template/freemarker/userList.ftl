@@ -30,10 +30,10 @@
                 <td>${disco.numeroCanciones}</td>
 
                 <td>
-                         <a href="/disco/borrar/${disco_index}">borrar</a>
+                         <a href="/disco/borrar/${disco_index}">Borrar</a>
                 </td>
                 <td>
-                         <a href="/disco/editar/${disco_index}">editar</a>
+                         <a href="/disco/editar/${disco_index}">Editar</a>
                 </td>
 
               
