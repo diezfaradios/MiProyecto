@@ -55,8 +55,5 @@ public class Disco {
             this.numeroCanciones = numeroCanciones;
         }
 
-
-        //Getter and Setter methods
- 
 }
 

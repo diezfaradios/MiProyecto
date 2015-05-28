@@ -31,7 +31,7 @@
     </div>
 
     <div id ="footer">
-        <p>Página realizada por Alumno Juan Jose Alemany usando Spark & Freemarker</p>
+        <br><p>Página realizada por Alumno Juan Jose Alemany usando Spark & Freemarker</p>
     </div>  
 
     </body>

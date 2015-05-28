@@ -21,36 +21,36 @@
 			<ul >
 			
 					<li id="li_1" >
-		<label class="description" for="element_1">TITULO </label>
+		<label class="description" for="titulo">TITULO </label>
 		<div>
-			<input id="element_1" name="element_1" class="element text medium" type="text" maxlength="255" value="${disco.titulo}"/> 
+			<input id="element_1" name="titulo" class="element text medium" type="text" maxlength="255" value="${disco.titulo}"/> 
 		</div> 
 		</li>		<li id="li_2" >
-		<label class="description" for="element_2">AUTOR </label>
+		<label class="description" for="autor">AUTOR </label>
 		<div>
-			<input id="element_2" name="element_2" class="element text medium" type="text" maxlength="255" value="${disco.autor}"/> 
+			<input id="element_2" name="autor" class="element text medium" type="text" maxlength="255" value="${disco.autor}"/> 
 		</div> 
 		</li>		<li id="li_3" >
-		<label class="description" for="element_3">AÑO </label>
+		<label class="description" for="año">AÑO </label>
 		<div>
-			<input id="element_3" name="element_3" class="element text small" type="text" maxlength="255" value="${disco.año}"/> 
+			<input id="element_3" name="año" class="element text small" type="text" maxlength="255" value="${disco.año}"/> 
 		</div> 
 		</li>		<li id="li_4" >
-		<label class="description" for="element_4">ESTILO </label>
+		<label class="description" for="estilo">ESTILO </label>
 		<div>
-			<input id="element_4" name="element_4" class="element text medium" type="text" maxlength="255" value="${disco.estilo}"/> 
+			<input id="element_4" name="estilo" class="element text medium" type="text" maxlength="255" value="${disco.estilo}"/> 
 		</div> 
 		</li>		<li id="li_5" >
-		<label class="description" for="element_5">NUMERO CANCIONES </label>
+		<label class="description" for="numeroCanciones">NUMERO CANCIONES </label>
 		<div>
-			<input id="element_5" name="element_5" class="element text medium" type="text" maxlength="255" value="${disco.numeroCanciones}"/> 
+			<input id="element_5" name="numeroCanciones" class="element text medium" type="text" maxlength="255" value="${disco.numeroCanciones}"/> 
 		</div> 
 		</li>
 			
 					<li class="buttons">
 			    <input type="hidden" name="form_id" value="1015054" />
 			    
-				<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+				<input id="saveForm" class="button_text" type="submit" name="submit" value="Guardar" />
 		</li>
 			</ul>
 		</form>	

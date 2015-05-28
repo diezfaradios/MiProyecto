@@ -5,12 +5,14 @@
   <fieldset>
         <cabecera>DISCO</cabecera>
   <form name="disco" action="/disco/create" method="post">
-        Titulo: <input type="text" name="titulo" /> <br/>
+  
+        Titulo:<input type="text" name="titulo" /> <br/>
         Autor: <input type="text" name="autor" /> <br/>
         Año: <input type="text" name="año" /> <br/>
         Estilo: <input type="text" name="estilo" /> <br/>
-        Numero canciones: <input type="text" name="numeroCanciones" /> <br/>
-        <input type="submit" value="   Save   " />
+        Numero canciones: <input type="text" name="numeroCanciones" /> 
+        <input type="submit" value="Save" />
+
   </form>
   </fieldset>
   <br/>
@@ -19,10 +21,11 @@
  
 </div>
   <table class="datatable","active">
+  
+                <th>Titulo</th>  <th>Autor</th> <th>Año</th> <th>Estilo</th> <th>Numero Canciones</th> <hr> <th>Edicion</th>
+       
     <td class="active">
-        <tr>
-                <th>titulo</th>  <th>autor</th> <th>año</th> <th>estilo</th> <th>NumeroCanciones</th>
-        </tr> 
+       
         <#list discos as disco>
         <tr>
                 <td>${disco.titulo}</td> <td>${disco.autor}</td>
@@ -33,10 +36,10 @@
                          <a href="/disco/borrar/${disco_index}">Borrar</a>
                 </td>
                 <td>
+               
                          <a href="/disco/editar/${disco_index}">Editar</a>
-                </td>
 
-              
+                </td>
 
         </tr>
         </td>

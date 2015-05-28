@@ -38,6 +38,7 @@ public class App
             	return modelAndView(data, "userList.ftl");
             }
         });
+        //crear un disco
         
         post(new Route("/disco/create") {
             @Override
@@ -57,6 +58,7 @@ public class App
                 return null;
             }
         });
+        // se crea un indice identificatorio.Borrar un disco indice.
         
         get(new Route("/disco/borrar/:indice") {
                         @Override
@@ -68,6 +70,7 @@ public class App
                             return null;
                         }
         });
+        // Boton editar manda al indice al formulario para editarlo.
         
         get(new FreeMarkerRoute("disco/editar/:indice") {
             @Override
@@ -83,17 +86,27 @@ public class App
             	return modelAndView(data, "editUser.ftl");
             }
         });
+        //editar en el formulario de edicion, indice; pasar los datos a la pagina principal
         
-              /*  get(new Route("/disco/borrar/:editar") {
-                        @Override
-                        public Object handle(Request request, Response response) {
-                            int indice = Integer.parseInt(
-                                    request.params(":indice"));                            
-                            discos.setValueAT(disco.);
-                            response.redirect("/");
-                            return null;
-                        }
-        }); */
+        post(new Route("disco/editar/:indice") {
+            @Override
+            public Object handle(Request request, Response response) {            	
+
+                int indice = Integer.parseInt(
+                                    request.params(":indice"));    
+                Disco disco = discos.get(indice);
+                
+                disco.setAutor(request.queryParams("autor"));
+                disco.setTitulo(request.queryParams("titulo"));
+                disco.setAño(request.queryParams("año"));
+                disco.setEstilo(request.queryParams("estilo"));
+                disco.setNumeroCanciones(Integer.parseInt(request.queryParams("numeroCanciones")));
+                
+                response.redirect("/");
+                return null;
+            }
+        });
+        
     }
 }
 
