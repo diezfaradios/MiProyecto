@@ -25,7 +25,7 @@ public class App
         
     	final ArrayList<Disco>discos = new ArrayList<>();
         discos.add(new Disco("Viento de Cara","Supersubmarina","2015","Pop",12));
-        discos.add(new Disco("Lana Del Rey","Born to Die","2012","Pop",12));
+        discos.add(new Disco("Born to Die","Lana Del Rey","2012","Pop",12));
         discos.add(new Disco("Vetusta Morla","la Deriva","2015","Pop",12));
 
         get(new FreeMarkerRoute("/") {
