@@ -33,7 +33,7 @@ public static void main(String[] args) {
     
     private static MongoClient crearConexion() {
         MongoClient mongo = null;
-        mongo = new MongoClient("localhost", 27017);
+        mongo = new MongoClient();
         return mongo;
     }
  

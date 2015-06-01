@@ -3,14 +3,14 @@ package daw.ed.spark;
 public class Disco {
         private String	titulo;
         private String	autor;
-        private String	año;
+        private double	año;
         private String  estilo;
-        private int  numeroCanciones;
+        private double  numeroCanciones;
  
         public Disco() {
         }
  
-        public Disco(String titulo, String autor, String año, String estilo, int numeroCanciones) {
+        public Disco(String titulo, String autor, double año, String estilo, double numeroCanciones) {
                 this.titulo = titulo;
                 this.autor = autor;
                 this.año = año;
@@ -27,14 +27,14 @@ public class Disco {
         	return autor;
                 
         }
-        public String getAño() {
+        public double getAño() {
             return año;
         }
 
          public String getEstilo() {
             return estilo;
   }
-         public int getNumeroCanciones() {
+         public double getNumeroCanciones() {
             return numeroCanciones;
         }
  
@@ -45,13 +45,13 @@ public class Disco {
         public void setAutor(String autor) {
         	this.autor = autor;
         }
-         public void setAño(String año) {
+         public void setAño(double año) {
         	this.año = año;
         }
           public void setEstilo(String estilo) {
             this.estilo = estilo;
         }
-          public void setNumeroCanciones(int numeroCanciones) {
+          public void setNumeroCanciones(double numeroCanciones) {
             this.numeroCanciones = numeroCanciones;
         }
 
