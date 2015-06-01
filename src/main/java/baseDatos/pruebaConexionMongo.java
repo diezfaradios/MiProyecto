@@ -33,11 +33,7 @@ public static void main(String[] args) {
     
     private static MongoClient crearConexion() {
         MongoClient mongo = null;
-        try {
-            mongo = new MongoClient("localhost", 27017);
-        } catch (UnknownHostException e) {
-            e.printStackTrace();
-        }
+        mongo = new MongoClient("localhost", 27017);
         return mongo;
     }
  

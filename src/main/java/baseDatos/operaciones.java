@@ -21,11 +21,7 @@ public class operaciones {
     public static void main(String[] args) {
         System.out.println("Prueba conexión MongoDB");
         MongoClient mongo = null;
-        try {
-            mongo = new MongoClient("localhost", 27017);
-        } catch (UnknownHostException e) {
-            e.printStackTrace();
-        }
+        mongo = new MongoClient("localhost", 27017);
  
         if (mongo != null) {
  
@@ -34,7 +30,7 @@ public class operaciones {
  
             //Crear una tabla si no existe y agrega datos
             DBCollection table = db.getCollection("disco");
-            
+        
             BasicDBObject document1 = new BasicDBObject();
 
             document1.put("nombre", "Viento de Cara");
@@ -62,11 +58,11 @@ public class operaciones {
 
             while (cur.hasNext()) {
 
-            System.out.println(" -Titulo " + cur.next().get("nombre") 
-                               + " Autor " + cur.curr().get("autor")
-                               + " Año publicación " + cur.curr().get("año") 
-                               + " Estilo "+ cur.next().get("estilo") 
-                               + " Nº canciones " + cur.next().get("numeroCanciones"));
+            System.out.println(" -Titulo: " + cur.next().get("nombre") 
+                               + ", Autor: " + cur.curr().get("autor")
+                               + ", Año publicación: " + cur.curr().get("año") 
+                               + ", Estilo: "+ cur.next().get("estilo") 
+                               + ", Nº canciones: " + cur.next().get("numeroCanciones"));
             }
 
             System.out.println();
@@ -101,8 +97,8 @@ public class operaciones {
             //Eliminar autor Lana del rey
             table.remove(new BasicDBObject().append("autor", "Lana Del Rey"));
 
-          //Borrar base de datos
-            db.dropDatabase();
+          /*Borrar base de datos
+            db.dropDatabase();*/
  
         } else {
             System.out.println("Error: Conexión no establecida");
